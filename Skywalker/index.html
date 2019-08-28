@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Scrolling controls for HTML5 video</title>
+	<link rel="stylesheet" href="./style.css">
+	
+	<style>
+		html, body {
+			background: black;
+		}
+		
+		#music {
+			margin-top: 500px;
+			position: fixed;
+			display: block
+		}
+		
+		#playbutton {
+			z-index: 100;
+			display: block;
+			position: fixed;
+			margin: 0;
+			padding: 0;
+		}
+		
+		#play {
+			color: white;
+			padding: 10px;
+			font-family: sans-serif;
+			border: 1px solid white;
+			margin: 0;
+		}
+	
+	</style>
+	
+</head>
+
+<body id='infinite-list'>
+
+	<script src='jquery-3.4.1.min.js'></script>
+	<script src="script.js"></script>
+
+	<div id="playbutton">
+		<p id="play" href="">PLAY</p>
+	</div>
+
+	<!-- partial:index.partial.html -->
+	
+	<audio id="music" autoplay loop>
+  <source src="media/music.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+	<div id="set-height"></div>
+	<p id="time"></p>
+	<video id="v0" tabindex="0" autobuffer="autobuffer" preload="preload" loop>
+<source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="media/astronaut_turntable_export.mp4"></source>
+  <p>Sorry, your browser does not support the &lt;video&gt; element.</p>
+</video>
+	<!-- partial -->
+
+</body>
+
+</html>
